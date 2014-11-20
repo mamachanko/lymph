@@ -3,6 +3,7 @@ import collections
 import six
 import yaml
 
+from lymph.exceptions import NoConfigFile
 from lymph.utils import import_object
 
 
@@ -40,8 +41,11 @@ class Configuration(object):
         return self
 
     def load_file(self, filename, sections=None):
-        with open(filename, 'r') as f:
-            self.load(f, sections=sections)
+        try:
+            with open(filename, 'r') as f:
+                self.load(f, sections=sections)
+        except IOError:
+            raise NoConfigFile('%s not found' % filename)
 
     def load(self, f, sections=None):
         for section, values in six.iteritems(yaml.load(f)):
