@@ -146,9 +146,10 @@ Extra component can be defined under the conponents namespace e.g ``SerialEventH
 
 
 .. code-block:: yaml
-  components:
-      SerialEventHandler:
-             zkclient: dep:kazoo
+
+    components:
+        SerialEventHandler:
+            zkclient: dep:kazoo
 
 
 
