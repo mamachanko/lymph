@@ -80,7 +80,8 @@ class InstanceCommand(Command):
 
         for cls_name in self.args.get('--interface', ()):
             cls = import_object(cls_name)
-            self.container.install_interface(cls)
+            instance = self.container.install_interface(cls)
+            instance.apply_config({})
 
     def _start_backdoor_terminal(self):
         # XXX(Mouad): Imported here since this is still broken in Python3.x
