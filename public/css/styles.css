@@ -1,0 +1,35 @@
+html {
+    font: 12pt/1.5em Garamond, Georgia, "Times New Roman", Times, serif;
+}
+
+body {
+    width: 45em;
+    margin: 7em auto;
+}
+        
+h1 {
+    font-size: 500%;
+}
+
+h2 {
+    line-height: 2em;
+    font-size: 200%;
+}
+
+ul, blockquote {
+    line-height: 2em;
+}
+
+ul a, ul a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+ul a:hover {
+    color: #0080FF;
+}
+
+div.gitlink {
+    float: right;
+    background: #eeeeee;
+}
