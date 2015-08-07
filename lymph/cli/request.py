@@ -23,7 +23,8 @@ class RequestCommand(Command):
     Usage: lymph request [options] <subject> <params> [-]
 
     Description:
-        Sends a single RPC request to <address>. Parameters have to be JSON encoded.
+        Sends a single RPC request to <address>. Parameters have to be JSON
+        encoded.
 
     Options:
       --ip=<address>               Use this IP for all sockets.
@@ -36,6 +37,13 @@ class RequestCommand(Command):
       -C <concurrency>             Send requests from <concurrency> concurrent greenlets [default: 1].
 
     {COMMON_OPTIONS}
+
+    Examples:
+
+        $ lymph request service.method '{"param_1": 1, "param_2": "two"}'
+
+        $ cat body.json | lymph request service.method -
+
     """
 
     short_description = 'Send a request message to some service and output the reply.'
