@@ -14,14 +14,24 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/styles.css">
 
-  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.1.1/gh-fork-ribbon.min.css" />
+  <style>
+    .right .github-fork-ribbon {
+        background-color: #000;
+    }
+  </style>
 
 </head>
 <body>
 
-  <div class="gitlink">
-    View on <a href="http://github.com/deliveryhero/lymph">GitHub</a>
+  <div class="github-fork-ribbon-wrapper right">
+      <div class="github-fork-ribbon">
+          <a href="https://github.com/deliveryhero/lymph">View on GitHub</a>
+      </div>
   </div>
+
+  <embed src="logo.svg" width="50%">
+
   <div class="container">
     <h1><a href="./">{{ site.tag_text }}</a></h1>
     {{ content }}

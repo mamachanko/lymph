@@ -2,8 +2,7 @@
 layout: default
 ---
 
-# lymph
-## a framework for Python services
+## lymph - a framework for Python services
 
 lymph features:
 
@@ -11,7 +10,5 @@ lymph features:
 * RPC: request-reply messaging (via ZeroMQ + MessagePack)
 * Events: pluggable and reliable pub-sub messaging (e.g. backed by RabbitMQ)
 * Process Management
-
-Read the [documentation](http://lymph.readthedocs.org).
 
 Check the [introduction](http://import-lymph.link) we presented at the EuroPython 2015 in Bilbao.
